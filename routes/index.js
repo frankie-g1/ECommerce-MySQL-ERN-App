@@ -9,7 +9,7 @@ router.get('/', function(req, res, next) {
 
 /* POST home page. */
 router.post('/', (req, res) => {
-    
+    // Respond to POST request
 });
 
 
