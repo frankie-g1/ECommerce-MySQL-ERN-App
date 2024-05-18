@@ -1,0 +1,22 @@
+{
+  "name": "mdern",
+  "version": "1.0.0",
+  "description": "MySQLERN Stack with Docker",
+  "main": "hello-world.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frankie-g1/MDERN.git"
+  },
+  "author": "Frank Guarino",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/frankie-g1/MDERN/issues"
+  },
+  "homepage": "https://github.com/frankie-g1/MDERN#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
