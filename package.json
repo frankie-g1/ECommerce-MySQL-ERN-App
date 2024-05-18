@@ -1,9 +1,10 @@
 {
   "name": "mdern",
-  "version": "1.0.0",
+  "version": "0.0.0",
+  "private": true,
   "description": "MySQLERN Stack with Docker",
-  "main": "hello-world.js",
   "scripts": {
+    "start": "node ./bin/www",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,6 +18,11 @@
   },
   "homepage": "https://github.com/frankie-g1/MDERN#readme",
   "dependencies": {
-    "express": "^4.19.2"
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "^4.19.2",
+    "http-errors": "~1.6.3",
+    "jade": "^0.29.0",
+    "morgan": "~1.9.1"
   }
 }
