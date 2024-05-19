@@ -1,17 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-    res.render('index', { title: 'Express' });
-});
-
-
-/* POST home page. */
-router.post('/', (req, res) => {
-    // Respond to POST request
-
-    var mysql = require('mysql');
+var mysql = require('mysql');
     var pool  = mysql.createPool({
         connectionLimit : 10,
         host            : 'localhost',
@@ -20,12 +10,29 @@ router.post('/', (req, res) => {
         database        : 'mderndb'
     });
 
-    pool.on('release', function (connection) {
-        console.log('Connection %d released', connection.threadId);
-        pool.end(function (error) {
-            console.log('Pool connections terminated');
-        });
-    });
+pool.on('release', function (connection) {
+    console.log('Connection %d released', connection.threadId);
+
+});
+
+/* GET home page. */
+router.get('/', function(req, res, next) {
+
+    pool.query('SELECT * FROM mderndemotable;', function (error, results, fields) {
+        if (error) throw error;
+
+        console.log(results);
+    })
+
+    res.render('index', { title: 'Express' });
+    
+});
+
+
+
+/* POST home page. */
+router.post('/', (req, res) => {
+    // Respond to POST request
 
     pool.query('INSERT INTO mderndemotable VALUES(NULL, "frankie");', function (error, results, fields) {
         if (error) throw error;
@@ -36,15 +43,6 @@ router.post('/', (req, res) => {
         }
         
     });
-
-    // a SELECT to see if insertion was successful
-    pool.query('SELECT * FROM mderndemotable;', function (error, results, fields) {
-        if (error) throw error;
-        console.log(results)
-    });
-    
-
-    
 
 });
 
