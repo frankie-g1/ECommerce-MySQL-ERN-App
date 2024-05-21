@@ -19,12 +19,17 @@ pool.on('release', function (connection) {
 router.get('/', function(req, res, next) {
 
     pool.query('SELECT * FROM mderndemotable;', function (error, results, fields) {
-        if (error) throw error;
-
+        if (error) { 
+            res.status(err.status || 500)
+            res.json({
+                message:err.message,
+                error: err
+            })
+        };
+        res.json(results)
         console.log(results);
     })
 
-    res.render('index', { title: 'Express' });
     
 });
 
