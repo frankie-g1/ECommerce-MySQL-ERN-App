@@ -4,7 +4,6 @@
   "private": true,
   "description": "MySQLERN Stack with Docker",
   "main": "app.js",
-  "proxy": "http://localhost:5000",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server",
@@ -22,6 +21,7 @@
   "homepage": "https://github.com/frankie-g1/MDERN#readme",
   "dependencies": {
     "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
     "debug": "~2.6.9",
     "express": "^4.19.2",
     "http-errors": "~1.6.3",

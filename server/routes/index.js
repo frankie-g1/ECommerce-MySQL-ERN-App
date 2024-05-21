@@ -26,11 +26,10 @@ router.get('/', function(req, res, next) {
                 error: err
             })
         };
-
+        res.json(results)
         console.log(results);
     })
 
-    res.render('index', { title: 'Express' });
     
 });
 
