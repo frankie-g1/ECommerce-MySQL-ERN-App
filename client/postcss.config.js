@@ -1,3 +1,5 @@
+javascript
+
 module.exports = {
   plugins: {
     tailwindcss: {},
