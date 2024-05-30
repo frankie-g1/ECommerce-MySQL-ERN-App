@@ -13,3 +13,8 @@ Next:
 As you notice, the D, here MDERN is supposed to represent Docker.
 
 Docker implementation planned to start tomorrow. It will let this turn into a deployable application. This is a great learning experience and is inspired by my job search and this forum [post](https://www.reddit.com/r/docker/comments/zgsaze/are_you_using_compose_for_local_development_flow/) 
+
+
+
+
+![image](https://github.com/frankie-g1/ECommerce-MySQL-ERN-App/assets/47835157/3c0d3c7f-d91f-4c70-8189-7790a5b1b017)
