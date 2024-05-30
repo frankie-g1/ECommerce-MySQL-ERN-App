@@ -3,6 +3,7 @@ import './App.css';
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Shop } from './pages/shop/shop';
+import { Navbar } from './components/navbar';
 
 
 class App extends Component{
@@ -26,6 +27,7 @@ class App extends Component{
         return (
             <div className="App">
                 <Router>
+                    <Navbar />
                     <Routes>
                         <Route path="/" element={<Shop/>}/>
                     </Routes>
